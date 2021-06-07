@@ -16,38 +16,41 @@ class homeScreen extends StatelessWidget {
         backgroundColor: Colors.black,
       );
     return Scaffold(
-      backgroundColor: Colors.black12,
       appBar: appBar2,
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(8),
-          alignment: Alignment.center,
-          width: 100,
-          height: 100,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black38,
-                blurRadius: 5,
-                offset: Offset(2.0, 5.0)
-              )
-            ],
-               color: Colors.teal,
-               gradient: LinearGradient(colors: [
-                 Colors.yellow , Colors.pink , Colors.cyan
-               ])
-          ),
-          child: Text("I am box",
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
-            fontSize: 20
-          ),
-          ),
-        ),
-      ),
+      body: Padding(padding: const EdgeInsets.all(8.0),
+      child: Align(
+                alignment: Alignment.bottomRight,
+                    child: Container(
+                      color: Colors.black,
+                      width: 200,
+                      height: 400,
+                      child : Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        width: 100,
+                        height: 100,
+                        color: Colors.red,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        width: 100,
+                        height: 100,
+                        color: Colors.yellow,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        width: 100,
+                        height: 100,
+                        color: Colors.green,
+                      ),
+                    ],
+                  ),
+                  ),
+              ),       
+      )
     );
   }
 }
