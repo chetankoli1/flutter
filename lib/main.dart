@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
+  debugShowCheckedModeBanner: false,
       title: "Sagar koli",
       home: homeScreen(),
     ));
@@ -15,6 +16,7 @@ class homeScreen extends StatelessWidget {
         backgroundColor: Colors.black,
       );
     return Scaffold(
+      backgroundColor: Colors.black12,
       appBar: appBar2,
       body: Center(
         child: Container(
@@ -33,7 +35,7 @@ class homeScreen extends StatelessWidget {
             ],
                color: Colors.teal,
                gradient: LinearGradient(colors: [
-                 Colors.yellow , Colors.pink
+                 Colors.yellow , Colors.pink , Colors.cyan
                ])
           ),
           child: Text("I am box",
