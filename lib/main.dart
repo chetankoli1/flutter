@@ -24,11 +24,12 @@ class HomeScreen extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
             children: [
-              DrawerHeader(child: Text("I am drawer",
-                            style: TextStyle(color: Colors.white),
-                            ),
-              decoration: BoxDecoration(color: Colors.purpleAccent)
-              ),
+              UserAccountsDrawerHeader(accountName: new Text("chetan koli"),
+               accountEmail: new Text("chetan@abc.com"),
+               currentAccountPicture: CircleAvatar(
+                  backgroundImage: NetworkImage("https://media.istockphoto.com/photos/portrait-of-smiling-handsome-man-in-blue-tshirt-standing-with-crossed-picture-id1045886560?k=6&m=1045886560&s=612x612&w=0&h=hXrxai1QKrfdqWdORI4TZ-M0ceCVakt4o6532vHaS3I="),
+               ),
+               ),
               ListTile(
                   leading: Icon(Icons.person),
                   title: Text("Account"),
