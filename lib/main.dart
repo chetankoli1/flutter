@@ -18,7 +18,8 @@ class HomeScreen extends StatelessWidget {
 
       ),
       appBar: AppBar(
-        title: new Text("sagar koli"),
+        title: new Text("chetan koli"),
+      
       ),
       drawer: Drawer(
         child: ListView(
@@ -26,7 +27,7 @@ class HomeScreen extends StatelessWidget {
               DrawerHeader(child: Text("I am drawer",
                             style: TextStyle(color: Colors.white),
                             ),
-              decoration: BoxDecoration(color: Colors.teal)
+              decoration: BoxDecoration(color: Colors.purpleAccent)
               ),
               ListTile(
                   leading: Icon(Icons.person),
