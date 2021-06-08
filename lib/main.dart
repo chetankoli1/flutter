@@ -19,7 +19,6 @@ class HomeScreen extends StatelessWidget {
       ),
       appBar: AppBar(
         title: new Text("chetan koli")
-      
       ),
       drawer: Drawer(
         child: ListView(
