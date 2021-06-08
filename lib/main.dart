@@ -13,13 +13,21 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      
-      body: Container(
-
-      ),
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
         title: new Text("chetan koli")
       ),
+      body: Center(
+        child: Card(
+          child: Column(
+           children: [
+             Image.asset("assets/Images/chetan.jpg")
+           ],
+          ),
+
+        )
+      ),
+    
       drawer: Drawer(
         child: ListView(
             children: [
@@ -30,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                ),
                ),
               ListTile(
-                  leading: Icon(Icons.person),
+                  leading: Icon(Icons.person),                           
                   title: Text("Account"),
                   subtitle: Text("This is full details"),
                   trailing: Icon(Icons.edit),
