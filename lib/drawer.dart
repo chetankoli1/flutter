@@ -1,3 +1,4 @@
+import 'package:example/pages/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -22,11 +23,20 @@ class MyDrawer extends StatelessWidget {
             trailing: Icon(Icons.edit),
           ),
           ListTile(
-              leading: Icon(Icons.feedback),
-              title: Text("feedback"),
-              subtitle: Text(
-                  "please give your feed back to improve more functionlity"),
-              trailing: Icon(Icons.refresh))
+            leading: Icon(Icons.feedback),
+            title: Text("feedback"),
+            subtitle:
+                Text("please give your feed back to improve more functionlity"),
+            trailing: Icon(Icons.refresh),
+          ),
+          // RaisedButton(
+          //   onPressed: () {
+          //     Navigator.pop(context);
+          //   },
+          //   child: new Text("Logout"),
+          //   color: Colors.pink,
+          //   textColor: Colors.white,
+          // )
         ],
       ),
     );
