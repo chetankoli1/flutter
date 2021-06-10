@@ -1,15 +1,16 @@
-import 'package:example/pages/HomeScreen.dart';
+import 'package:example/utils/Constants.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
   var userNameController = TextEditingController();
   var passwordNameController = TextEditingController();
-
+  final Constants constants = Constants();
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final Constants constants = Constants();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +66,8 @@ class _LoginPageState extends State<LoginPage> {
                             //     context,
                             //     MaterialPageRoute(
                             //         builder: (context) => HomeScreen()));
-                            Navigator.pushNamed(context, "/home");
+                            constants.createSessson(true);
+                            Navigator.pushReplacementNamed(context, "/home");
                           },
                           child: new Text("Login"),
                           color: Colors.pink,

@@ -1,4 +1,3 @@
-import 'package:example/pages/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {

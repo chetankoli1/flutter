@@ -1,4 +1,5 @@
 import 'package:example/drawer.dart';
+import 'package:example/utils/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -9,6 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final Constants constants = Constants();
   TextEditingController _nameController = TextEditingController();
   var myText = "Change me";
   var urls = "https://jsonplaceholder.typicode.com/photos";
@@ -32,7 +34,17 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[200],
-        appBar: AppBar(title: new Text("chetan koli")),
+        appBar: AppBar(
+          title: new Text("chetan koli"),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  constants.removeSesson();
+                  Navigator.pushReplacementNamed(context, "/login");
+                },
+                icon: Icon(Icons.exit_to_app))
+          ],
+        ),
         body: Center(
             child: Padding(
           padding: EdgeInsets.all(16.0),
